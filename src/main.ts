@@ -6,7 +6,6 @@ import { Router } from "express";
 
 import "./configs/dotenv.config";
 import { createCabinetRouter } from "./modules/routes/routes";
-import { createPaymentRouter } from "./modules/payment/routes/payment";
 
 const app = express();
 
@@ -21,7 +20,6 @@ function addApiRoutes() {
 
   router.use("/auth", createAuthRouter());
   router.use("/cabinet", createCabinetRouter());
-  router.use("/payment", createPaymentRouter());
 
   return router;
 }
